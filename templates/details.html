@@ -1,0 +1,26 @@
+<div ng-controller="detailsCtrl" class="container">
+  <h2>Project details</h2>
+  <div class="prjdtls">
+	<div class="row">
+		<div class="col-md-6">Name</div>
+		<div class="col-md-6" ng-bind="' : '+prjDetails.projectname"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">Cost</div>
+		<div class="col-md-6" ng-bind="' : $'+prjDetails.cost"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">Duration</div>
+		<div class="col-md-6" ng-bind="' : '+prjDetails.duration+' months'"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">Status</div>
+		<div class="col-md-6" ng-bind="' : '+prjDetails.status"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<a ui-sref="listing">Back to Projects</a>
+		</div>
+	</div>
+  </div>
+</div>

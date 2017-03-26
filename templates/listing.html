@@ -1,0 +1,28 @@
+<div ng-controller="listingCtrl" class="container">
+  <h2>Todo List</h2>
+  <div class="row" style="float:right">
+	<div class="col-md-12 form-group">
+	  Search<input type="text" class="form-control" ng-model="search">
+	</div>
+  </div>
+  <div class="row">  
+  <div class="table-responsive col-md-12">          
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Serial</th>
+        <th>Project Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="prj in projectsList | filter:search" ng-click="getDetailsPage(prj.id)" style="cursor:pointer;">
+        <td>{{ $index+1 }}</td>
+        <td>{{ prj.projectname }}</td>
+        <td>{{ prj.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+</div>
